@@ -1,0 +1,11 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+env = []
+mounts = []
+
+[[config.domains]]
+serviceName = "mtprotoproxy"
+port = 443
+host = "${main_domain}"

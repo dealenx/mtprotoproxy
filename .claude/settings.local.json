@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import secrets; print\\(secrets.token_hex\\(16\\)\\)\")",
+      "Bash(python3 -c \"import secrets; print\\(secrets.token_hex\\(16\\)\\)\")",
+      "Bash(py -c \"import secrets; print\\(secrets.token_hex\\(16\\)\\)\")",
+      "Bash(node -e \"console.log\\(require\\(''crypto''\\).randomBytes\\(16\\).toString\\(''hex''\\)\\)\")"
+    ]
+  }
+}

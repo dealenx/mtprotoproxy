@@ -1,0 +1,12 @@
+version: "1"
+meta:
+  slug: "mtprotoproxy"
+  name: "MTProto Proxy"
+  version: "1.0.0"
+  description: "Async MTProto proxy for Telegram"
+  tags: ["Telegram", "proxy", "MTProto"]
+  links:
+    github: "https://github.com/dealenx/mtprotoproxy"
+template:
+  compose: "docker-compose.yml"
+  config: "template.dokploy.toml"

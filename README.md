@@ -1,3 +1,6 @@
+[![Deploy with Dokploy](https://img.shields.io/badge/Deploy_with-Dokploy-black)](https://dealenx.github.io/Dokployfile/dealenx/mtprotoproxy)
+
+
 # Async MTProto Proxy #
 
 Fast and simple to setup MTProto proxy written in Python.
