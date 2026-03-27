@@ -1,8 +1,7 @@
 [variables]
-pass = "${secret:32}"
+pass = "${password:32}"
 
 [config]
-mounts = []
 
 [config.env]
 MTPROTO_SECRET = "${pass}"
