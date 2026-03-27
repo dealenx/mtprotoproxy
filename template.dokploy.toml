@@ -1,11 +1,8 @@
 [variables]
-main_domain = "${domain}"
+secret = "${secret:32}"
 
 [config]
-env = []
 mounts = []
 
-[[config.domains]]
-serviceName = "mtprotoproxy"
-port = 443
-host = "${main_domain}"
+[config.env]
+MTPROTO_SECRET = "${secret}"

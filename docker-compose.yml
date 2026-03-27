@@ -1,20 +1,20 @@
-version: '2.0'
 services:
   mtprotoproxy:
     image: ghcr.io/dealenx/mtprotoproxy:latest
     restart: unless-stopped
-    network_mode: "host"
+    ports:
+      - "${MTPROTO_PORT:-8441}:${MTPROTO_PORT:-8441}"
     environment:
-      - MTPROTO_PORT=${MTPROTO_PORT:-443}
+      - MTPROTO_PORT=${MTPROTO_PORT:-8441}
       - MTPROTO_SECRET=${MTPROTO_SECRET:-90f1cdecf45ef2210411b4eb154fad0c}
       - MTPROTO_TLS_DOMAIN=${MTPROTO_TLS_DOMAIN:-}
       - MTPROTO_AD_TAG=${MTPROTO_AD_TAG:-}
       - MTPROTO_MODES=${MTPROTO_MODES:-}
     volumes:
-        - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/localtime:ro
     logging:
-        driver: "json-file"
-        options:
-            max-file: "10"
-            max-size: "10m"
+      driver: "json-file"
+      options:
+        max-file: "10"
+        max-size: "10m"
 #    mem_limit: 1024m
