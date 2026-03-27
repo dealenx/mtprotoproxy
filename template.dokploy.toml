@@ -1,5 +1,5 @@
 [variables]
-pass = "${password:32}"
+pass = "${hash:16}"
 
 [config]
 
