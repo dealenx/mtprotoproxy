@@ -1,7 +1,7 @@
 version: '2.0'
 services:
   mtprotoproxy:
-    build: .
+    image: ghcr.io/dealenx/mtprotoproxy:latest
     restart: unless-stopped
     network_mode: "host"
     environment:
@@ -11,8 +11,6 @@ services:
       - MTPROTO_AD_TAG=${MTPROTO_AD_TAG:-}
       - MTPROTO_MODES=${MTPROTO_MODES:-}
     volumes:
-        - ./config.py:/home/tgproxy/config.py
-        - ./mtprotoproxy.py:/home/tgproxy/mtprotoproxy.py
         - /etc/localtime:/etc/localtime:ro
     logging:
         driver: "json-file"
